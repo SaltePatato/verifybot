@@ -66,7 +66,7 @@ router.get("/", (req, res, next) => {
     const perms = await client.permLevel(req.user.id);
 
     // If user is verified, tell them that they are already verified
-    if (perms.level >= 1) {
+    if (perms.level === 1) {
         return res.render(`${templateDir}/index.ejs`, {
             client,
             user: req.user,
