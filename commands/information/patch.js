@@ -4,9 +4,9 @@ const Base = require("../../base/Command.js");
 module.exports = class Suggest extends Base {
     constructor(client) {
         super(client, {
-            name: "suggest",
+            name: "patch",
             description: "Lists new updates.",
-            usage: "<patch>",
+            usage: "[patch]",
             category: "information",
             permLevel: 0,
             aliases: ["updates"]
