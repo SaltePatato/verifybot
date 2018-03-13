@@ -19,6 +19,6 @@ module.exports = class Suggest extends Base {
         }
 
         const patch = patches[args[0]] || patches[current];
-        message.channel.send(`__Patch **${patch.name}**__\n*Released ${patch.released}\n\n${patch.additions.map(addition => `**+** ${addition}`).join("\n")}\n\n${patch.removals.map(removal => `**-** ${removal}`).join("\n")}\n\n${patch.notes.map(note => `**\\*** ${note}`)}`);
+        message.channel.send(`__Patch **${patch.name}**__\n*Released ${patch.released}*\n\n${patch.additions.map(addition => `**+** ${addition}`).join("\n")}\n\n${patch.removals.map(removal => `**-** ${removal}`).join("\n")}\n\n${patch.notes.map(note => `**\\*** ${note}`)}`);
     }
 };
