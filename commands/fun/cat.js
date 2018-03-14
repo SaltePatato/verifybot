@@ -16,6 +16,7 @@ module.exports = class Meow extends Base {
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
 
         const meowStorage = [
+        //Cats from the internet
             "http://random.cat/i/068_-_6vuLGR1.gif",
             "http://random.cat/i/uUi0a.jpg",
             "http://random.cat/i/mFC8oVK.jpg",
@@ -28,6 +29,7 @@ module.exports = class Meow extends Base {
             "http://random.cat/i/img_20161017_122411.jpg",
             "http://random.cat/i/GQXOl.png",
             "http://random.cat/i/t3nMb.jpg",
+         //Cats from my discord
             "https://cdn.discordapp.com/attachments/423571873079492619/423573937251680258/9k.png",
             "https://cdn.discordapp.com/attachments/423571873079492619/423613906859196419/KILLER_CATZ.png",
             "https://cdn.discordapp.com/attachments/423571873079492619/423613942447734795/cat_3.jpg",
