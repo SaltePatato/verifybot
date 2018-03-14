@@ -17,7 +17,7 @@ module.exports = class Meow extends Base {
 
         const meowStorage = [
         //Cats from the internet
-            "http://random.cat/i/068_-_6vuLGR1.gif",
+         //Images (PNG/JPG)
             "http://random.cat/i/uUi0a.jpg",
             "http://random.cat/i/mFC8oVK.jpg",
             "http://random.cat/i/YTgRq.jpg",
@@ -29,6 +29,12 @@ module.exports = class Meow extends Base {
             "http://random.cat/i/img_20161017_122411.jpg",
             "http://random.cat/i/GQXOl.png",
             "http://random.cat/i/t3nMb.jpg",
+            "http://random.cat/i/iVpaM.jpg",
+            "http://random.cat/i/riGL8.jpg",
+            "http://random.cat/i/uWjbg.jpg",
+         //GIFs
+            "http://random.cat/i/068_-_6vuLGR1.gif",
+            "http://random.cat/i/054_-_o8Oe3pb.gif",
          //Cats from my discord
             "https://cdn.discordapp.com/attachments/423571873079492619/423573937251680258/9k.png",
             "https://cdn.discordapp.com/attachments/423571873079492619/423613906859196419/KILLER_CATZ.png",
