@@ -1,5 +1,5 @@
 {
-    "current": "2.0",
+    "current": "2.1",
     "patches": {
         "1.0": {
             "name": "1.0",
@@ -31,6 +31,19 @@
                 "Some of you may have gotten unverified due to a bug with VerifyBot 1.0 causing users to be removed from the database"
             ],
             "released": "03/11/18"
+        },
+        "2.1": {
+            "name": "2.1",
+            "additions": [
+                "!8ball",
+                "!dog",
+                "!hack",
+                "!op",
+                "!pick"
+            ],
+            "removals": [],
+            "notes": [],
+            "released": "03/13/18"
         }
     }
 }
