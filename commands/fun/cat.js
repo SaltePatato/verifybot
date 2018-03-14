@@ -15,12 +15,12 @@ module.exports = class Meow extends Base {
         // Ignore if sent in dfchat
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
 
-        const responses = [
+        const meowStorage = [
             "Cat 1.",
             "Cat 2."
         ];
 
         // Send a response
-        message.channel.send(`[**Cat**] ${responses[Math.floor(Math.random() * responses.length)]}`);
+        message.channel.send(`[**Cat**] ${meowStorage[Math.floor(Math.random() * meowStorage.length)]}`);
     }
 };
