@@ -18,7 +18,7 @@ module.exports = class EightBall extends Base {
         if (message.content.indexOf("?") !== message.content.length - 1) return super.error("That doesn't look like a question to me!");
 
         const responses = [
-            "Definately.",
+            "Definitely.",
             "Most likely.",
             "Cannot predict now.",
             "You may rely on it.",
