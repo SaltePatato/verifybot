@@ -5,7 +5,7 @@ module.exports = class Pick extends Base {
         super(client, {
             name: "pick",
             description: "Picks between multiple specified options. Separate your options with |s.",
-            usage: "<item1,item2...>",
+            usage: "<item1|item2...>",
             category: "fun",
             permLevel: 0 
         });
