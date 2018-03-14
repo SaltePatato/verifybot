@@ -12,6 +12,9 @@ module.exports = class Hack extends Base {
     }
 
     async run(message, args) {
+        // Ignore if sent in dfchat
+        if (message.channel.name === "dfchat") return super.error("You can't use that here!");
+        
         const log = await message.channel.send("Interfacing with mcdiamondfire.com...");
         await this.pause();
         await log.edit("Connection created. Cracking admin account passwords...");
