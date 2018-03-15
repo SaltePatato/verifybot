@@ -17,7 +17,7 @@ module.exports = class Meow extends Base {
 
         const meowStorage = [
         //Cats from the internet
-         //Images (PNG/JPG)
+         //Images
             "http://random.cat/i/uUi0a.jpg",
             "http://random.cat/i/mFC8oVK.jpg",
             "http://random.cat/i/YTgRq.jpg",
@@ -33,10 +33,19 @@ module.exports = class Meow extends Base {
             "http://random.cat/i/riGL8.jpg",
             "http://random.cat/i/uWjbg.jpg",
             "https://purr.objects-us-west-1.dream.io/i/img_3499.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/image.jpeg",
+            "https://purr.objects-us-west-1.dream.io/i/fergus_05.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/8O1TS.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/montyhiking.jpeg",
+            "https://purr.objects-us-west-1.dream.io/i/0c7gC.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/img_0178.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/OoNx6.jpg",
          //GIFs
             "http://random.cat/i/068_-_6vuLGR1.gif",
             "http://random.cat/i/054_-_o8Oe3pb.gif",
-         //Cats from my discord
+            "https://purr.objects-us-west-1.dream.io/i/059_-_RJ9CufX.gif",
+            "https://purr.objects-us-west-1.dream.io/i/085_-_uRuU0ni.gif",
+         //Discord Cats
             "https://cdn.discordapp.com/attachments/423571873079492619/423573937251680258/9k.png",
             "https://cdn.discordapp.com/attachments/423571873079492619/423613906859196419/KILLER_CATZ.png",
             "https://cdn.discordapp.com/attachments/423571873079492619/423613942447734795/cat_3.jpg",
