@@ -71,7 +71,7 @@ module.exports = class Meow extends Base {
             "https://purr.objects-us-west-1.dream.io/i/catiiidi.jpg",
             "https://purr.objects-us-west-1.dream.io/i/W8Er0Bt.jpg",
             "https://purr.objects-us-west-1.dream.io/i/11226561_939465719444268_5011472048854498701_n.jpg",
-            "https://purr.objects-us-west-1.dream.io/i/scottishfold.jpg
+            "https://purr.objects-us-west-1.dream.io/i/scottishfold.jpg",
          //GIFs
             "http://random.cat/i/068_-_6vuLGR1.gif",
             "http://random.cat/i/054_-_o8Oe3pb.gif",
