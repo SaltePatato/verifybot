@@ -16,7 +16,7 @@ module.exports = class EightBall extends Base {
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
         // Error if message does not end in ?
         if (message.content.indexOf("?") !== message.content.length - 1) return super.error("That doesn't look like a question to me!");
-
+        //Responses
         const responses = [
             "Yeah, why not?",
             "Definitely.",
@@ -24,6 +24,7 @@ module.exports = class EightBall extends Base {
             "I'd say yes.",
             "Cannot predict now.",
             "I can't tell",
+            "I'm not sure... Try asking again.",
             "You may rely on it.",
             "Maybe, maybe not.",
             "It's a no from me.",
