@@ -5,7 +5,7 @@ module.exports = class Meow extends Base {
         super(client, {
             name: "cat",
             description: "Sends a random cat image.",
-            usage: "<cat>",
+            usage: "",
             category: "fun",
             permLevel: 0 
         });
@@ -58,6 +58,20 @@ module.exports = class Meow extends Base {
             "https://purr.objects-us-west-1.dream.io/i/img_20160411_061203.jpg",
             "https://purr.objects-us-west-1.dream.io/i/esI3L.jpg",
             "https://purr.objects-us-west-1.dream.io/i/33image2.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/img_20170904_234526.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/hgyw6Tc.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/1NfYmpq.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/EwXHN.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/iqROl.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/20170214_180225.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/UNb83.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/img_0736.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/4392155750_100d81d83b_b.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/OADxt.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/catiiidi.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/W8Er0Bt.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/11226561_939465719444268_5011472048854498701_n.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/scottishfold.jpg
          //GIFs
             "http://random.cat/i/068_-_6vuLGR1.gif",
             "http://random.cat/i/054_-_o8Oe3pb.gif",
