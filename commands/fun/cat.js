@@ -40,6 +40,10 @@ module.exports = class Meow extends Base {
             "https://purr.objects-us-west-1.dream.io/i/0c7gC.jpg",
             "https://purr.objects-us-west-1.dream.io/i/img_0178.jpg",
             "https://purr.objects-us-west-1.dream.io/i/OoNx6.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/ginger2.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/221.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/6160178551_e828a193b2_z.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/isabel.jpg",
          //GIFs
             "http://random.cat/i/068_-_6vuLGR1.gif",
             "http://random.cat/i/054_-_o8Oe3pb.gif",
