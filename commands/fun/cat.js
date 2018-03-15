@@ -78,16 +78,16 @@ module.exports = class Meow extends Base {
             "https://purr.objects-us-west-1.dream.io/i/059_-_RJ9CufX.gif",
             "https://purr.objects-us-west-1.dream.io/i/085_-_uRuU0ni.gif",
          //Discord Cats
-            "https://cdn.discordapp.com/attachments/423571873079492619/423573937251680258/9k.png",
-            "https://cdn.discordapp.com/attachments/423571873079492619/423613906859196419/KILLER_CATZ.png",
-            "https://cdn.discordapp.com/attachments/423571873079492619/423613942447734795/cat_3.jpg",
-            "https://cdn.discordapp.com/attachments/423571873079492619/423613885711384576/hungry_cat.jpg",
-            "https://cdn.discordapp.com/attachments/239551387627814922/423892648546271232/image.jpg",
-            "https://cdn.discordapp.com/attachments/236949238032891904/423892737255931904/image.jpg",
-            "https://cdn.discordapp.com/attachments/236949238032891904/423892758982295552/image.jpg",
-            "https://cdn.discordapp.com/attachments/236949238032891904/423892866486501376/image.jpg",
-            "https://cdn.discordapp.com/attachments/236949238032891904/423892978508234772/image.jpg",
-            "https://cdn.discordapp.com/attachments/236949238032891904/423893058141028354/image.jpg
+            "https://cdn.discordapp.com/attachments/423571873079492619/423573937251680258/9k.png from **Chewyball10**",
+            "https://cdn.discordapp.com/attachments/423571873079492619/423613906859196419/KILLER_CATZ.png from **Cowpcake**",
+            "https://cdn.discordapp.com/attachments/423571873079492619/423613942447734795/cat_3.jpg from **Cowpcake**",
+            "https://cdn.discordapp.com/attachments/423571873079492619/423613885711384576/hungry_cat.jpg from **Cowpcake**",
+            "https://cdn.discordapp.com/attachments/239551387627814922/423892648546271232/image.jpg from **Majik**",
+            "https://cdn.discordapp.com/attachments/236949238032891904/423892737255931904/image.jpg from **Majik**",
+            "https://cdn.discordapp.com/attachments/236949238032891904/423892758982295552/image.jpg from **Majik**",
+            "https://cdn.discordapp.com/attachments/236949238032891904/423892866486501376/image.jpg from **Majik**",
+            "https://cdn.discordapp.com/attachments/236949238032891904/423892978508234772/image.jpg from **Majik**",
+            "https://cdn.discordapp.com/attachments/236949238032891904/423893058141028354/image.jpg from **Majik**",
          //Dubzini
             "https://cdn.discordapp.com/attachments/423321409918599169/423872111724068864/IMG_20180315_165615.jpg"
         ];
