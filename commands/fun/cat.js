@@ -32,6 +32,7 @@ module.exports = class Meow extends Base {
             "http://random.cat/i/iVpaM.jpg",
             "http://random.cat/i/riGL8.jpg",
             "http://random.cat/i/uWjbg.jpg",
+            "https://purr.objects-us-west-1.dream.io/i/img_3499.jpg",
          //GIFs
             "http://random.cat/i/068_-_6vuLGR1.gif",
             "http://random.cat/i/054_-_o8Oe3pb.gif",
