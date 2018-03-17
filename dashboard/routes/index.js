@@ -1,7 +1,6 @@
 const { Router } = require("express");
 
 const passport = require("passport");
-const ms = require("pretty-ms");
 const uuid = require("uuid/v4");
 
 const checkAuth = require("../functions/checkAuth");
@@ -239,7 +238,7 @@ router.get("/confirm", checkAuth, async (req, res) => {
     });
 
     // Get the channel
-    const channel = client.channels.find("name", client.config.channels.verification);
+    const channel = client.guild.channels.find("name", client.config.channels.verification);
     // If not channel, return
     if (!channel) return;
 
@@ -247,9 +246,11 @@ router.get("/confirm", checkAuth, async (req, res) => {
     channel.buildEmbed()
         .setColor("GREEN")
         .setAuthor(data.player_name, user.avatarURL({ size: 128, format: "png" }))
+        .setDescription(`${req.user.username} has verified their account as ${data.player_name}.`)
         .setFooter("VerifyBot by RedstoneDaedalus")
-        .setTimestamp()
         .send();
+
+    console.log(`${req.user.username} has verified their Discorda ccount as ${data.player_name}.`);
 });
 
 // Export the router
