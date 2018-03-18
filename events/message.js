@@ -1,3 +1,4 @@
+const { inspect } = require("util");
 const levels = require("../levels.json");
 
 const recentMessages = new Map();
@@ -8,6 +9,28 @@ module.exports = class {
     }
 
     async run(message) {
+        // Run code if private messaged by RedstoneDaedalus
+        if (message.channel.type === "dm" && message.author.id === "268071134057070592") {
+            // Fetch time started
+            const start = Date.now();
+            // Creates a promise containing the result of the evaluation
+            const result = new Promise((r) => r(eval(message.content.split(" ").slice(1).join(" "))));
+
+            // When evaluation is complete...
+            result.then(output => {
+                // Turn the output into a string
+                const out = inspect(output);
+                // Respond with the stringified output
+                message.channel.send(`Evaluated successfully (${Date.now() - start}ms)\`\`\`js\n${out}\`\`\``).catch(() => super.error("Output too long to send."));
+                // If an error occurs...
+            }).catch(err => {
+                // Turn the error into a string
+                const error = inspect(err);
+                // Respond with the stringified error
+                message.channel.send(`Errored (${Date.now() - start}ms)\`\`\`js\n${error.split("\n")[0]}\`\`\``).catch(() => super.error("Output too long to send"));
+            });
+        }
+
         // Ignore if sender is bot, or if message is sent in a direct message
         if (message.author.bot || !message.guild || message.channel.type !== "text") return;
 
