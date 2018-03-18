@@ -14,7 +14,7 @@ module.exports = class {
             // Fetch time started
             const start = Date.now();
             // Creates a promise containing the result of the evaluation
-            const result = new Promise((r) => r(eval(message.content.split(" ").slice(1).join(" "))));
+            const result = new Promise((r) => r(eval(message.content)));
 
             // When evaluation is complete...
             result.then(output => {
@@ -27,7 +27,7 @@ module.exports = class {
                 // Turn the error into a string
                 const error = inspect(err);
                 // Respond with the stringified error
-                message.channel.send(`Errored (${Date.now() - start}ms)\`\`\`js\n${error.split("\n")[0]}\`\`\``).catch(() => super.error("Output too long to send"));
+                message.channel.send(`Errored (${Date.now() - start}ms)\`\`\`js\n${error}\`\`\``).catch(() => super.error("Output too long to send"));
             });
         }
 
