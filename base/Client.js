@@ -55,23 +55,16 @@ class CustomClient extends Client {
         Object.defineProperty(this, "guildID", { value: clientOptions.guild });
 
         /**
-         * The connection to the mySQL database
-         * @type {Connection}
+         * SQL data
+         * @type {Object}
          */
-        Object.defineProperty(this, "connection", { value: null, writable: true });
-
-        if (clientOptions.sql) {
-            const connection = mysql.createConnection(clientOptions.sql);
-
-            connection.connect();
-            Object.defineProperty(this, "connection", { value: connection, writable: true });
-        }
+        Object.defineProperty(this, "sql", { value: clientOptions.sql });
 
         setInterval(async () => {
             // Fetch all verified users
             const verified = this.guild.members.filter(member => member.roles.exists("name", "Verified"));
             // Fetch account data
-            const data = await this.query("SELECT player_name,discord_id FROM linked_accounts;");
+            const data = await this.query("SELECT player_name, discord_id FROM linked_accounts;");
             
             // Run through all verified users
             verified.forEach(user => {
@@ -179,12 +172,17 @@ class CustomClient extends Client {
      * @param {String} sql The sql code to execute
      * @returns {Promise<Array>} An array of results
      */
-    query(sql, values = []) {
+    query(...params) {
+        // Create a connection
+        const connection = mysql.createConnection(this.sql);
+        connection.connect();
+
         return new Promise((resolve, reject) => {
             // Create a MySQL query from the connection
-            this.connection.query(sql, values, (err, result) => {
+            connection.query(...params, (err, result) => {
                 if (err) return reject(err);
                 resolve(result);
+                connection.end();
             });
         });
     }
