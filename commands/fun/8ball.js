@@ -18,24 +18,14 @@ module.exports = class EightBall extends Base {
         if (message.content.indexOf("?") !== message.content.length - 1) return super.error("That doesn't look like a question to me!");
         //Responses
         const responses = [
-            "Yeah, why not?",
             "Definitely.",
             "Most likely.",
-            "I'd say yes.",
-            "My sources say yes."
             "Cannot predict now.",
-            "I can't tell",
-            "I don't know what to answer...",
-            "Try asking again later...",
-            "I'm not sure... Try asking again.",
             "You may rely on it.",
             "Maybe, maybe not.",
-            "Yes! Wait... No.",
             "It's a no from me.",
             "Absolutely not!",
-            "Eeh, no.",
-            "Yeah... No.",
-            "Sounds like a no to me."
+            "Eeh, no."
         ];
 
         // Send a response
