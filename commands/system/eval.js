@@ -27,7 +27,7 @@ module.exports = class Eval extends Base {
             super.respond(`Evaluated successfully (${Date.now() - start}ms)\`\`\`js\n${out}\`\`\``).catch(async () => {
                 const { body } = await post("https://hastebin.com/document").send(out);
 
-                super.success(`https://hastebin.com/${body.key}`);
+                super.respond(`https://hastebin.com/${body.key}`);
             });
             // If an error occurs...
         }).catch(err => {
