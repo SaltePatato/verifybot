@@ -46,7 +46,7 @@ class ModCommand extends Command {
         if (!silent) target.send(`You have a new ${name} for the reason \`${reason}\`.`).catch(() => null);
 
         // Respond to the message
-        super.respond(`Successfully executed ${name} on ${target.tag}.`);
+        super.respond(`Successfully executed ${name} on ${target.user.tag}.`);
     }
 }
 

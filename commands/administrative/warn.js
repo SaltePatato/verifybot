@@ -7,7 +7,7 @@ module.exports = class Warn extends Base {
             description: "Warns the mentioned user.",
             usage: "<user> [-s] <reason>",
             category: "administrative",
-            permLevel: 3
+            permLevel: 4
         });
     }
 
