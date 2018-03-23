@@ -7,7 +7,8 @@ module.exports = class Ban extends Base {
             description: "Checks a user's Discord history.",
             usage: "<user>",
             category: "administration",
-            permLevel: 3
+            permLevel: 4,
+            aliases: ["hist"]
         });
     }
 
