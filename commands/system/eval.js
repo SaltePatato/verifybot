@@ -24,11 +24,10 @@ module.exports = class Eval extends Base {
             // Turn the output into a string
             const out = inspect(output);
             // Respond with the stringified output
-            super.respond(`Evaluated successfully (${Date.now() - start}ms)\`\`\`js\n${out}\`\`\``).catch(() => {
-                super.error("Output too long to send. Check your private messages for a hastebin URL containing the evaluated output.");
-                
-                const { body } = post("https://hastebin.com/document").send(out);
-                message.author.send(`Here's your evaluated output: https://hastebin.com/${body.key}`);
+            super.respond(`Evaluated successfully (${Date.now() - start}ms)\`\`\`js\n${out}\`\`\``).catch(async () => {
+                const { body } = await post("https://hastebin.com/document").send(out);
+
+                super.success(`https://hastebin.com/${body.key}`);
             });
             // If an error occurs...
         }).catch(err => {
