@@ -39,7 +39,7 @@ class Command {
          */
         this.conf = {
             level: options.permLevel || 0,
-            cooldown: options.cooldown || 300000,
+            cooldown: options.cooldown || 20000,
             aliases: options.aliases || []
         };
 
