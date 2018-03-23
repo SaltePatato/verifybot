@@ -1,5 +1,6 @@
 const Base = require("../../base/Command.js");
 const { inspect } = require("util");
+const { post } = require("snekfetch");
 
 module.exports = class Eval extends Base {
     constructor(client) {
@@ -23,7 +24,12 @@ module.exports = class Eval extends Base {
             // Turn the output into a string
             const out = inspect(output);
             // Respond with the stringified output
-            super.respond(`Evaluated successfully (${Date.now() - start}ms)\`\`\`js\n${out}\`\`\``).catch(() => super.error("Output too long to send."));
+            super.respond(`Evaluated successfully (${Date.now() - start}ms)\`\`\`js\n${out}\`\`\``).catch(() => {
+                super.error("Output too long to send. Check your private messages for a hastebin URL containing the evaluated output.");
+                
+                const { body } = post("https://hastebin.com/document").send(out);
+                message.author.send(`Here's your evaluated output: https://hastebin.com/${body.key}`);
+            });
             // If an error occurs...
         }).catch(err => {
             // Turn the error into a string

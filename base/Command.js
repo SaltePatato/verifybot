@@ -39,7 +39,7 @@ class Command {
          */
         this.conf = {
             level: options.permLevel || 0,
-            cooldown: options.cooldown || 10000,
+            cooldown: options.cooldown || 300000,
             aliases: options.aliases || []
         };
 
@@ -59,13 +59,11 @@ class Command {
         return new Promise((resolve) => {
             // Match the user mention
             const match = /(?:<@!?)?(\d{15,21})?/ig.exec(user);
-            // If no match returned, return null
-            if (!match) return null;
             
             // Fetch the ID from the match
-            const id = match[1];
+            const id = match ? match[1] : null;
             // Fetch the user from the ID
-            this.client.users.fetch(id).then(resolve).catch(() => resolve(null));
+            resolve(this.client.users.get(id) || (this.client.guild.members.find("displayName", user) || { user: null }).user);
         });
     }
 
