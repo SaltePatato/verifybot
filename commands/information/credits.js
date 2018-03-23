@@ -20,7 +20,7 @@ module.exports = class Credits extends Base {
             .addField("» RedstoneDaedalus#2020 (268071134057070592)", "Bot developer")
             .addField("» Jeremaster#3655 (180506843796209664)", "Minecraft server developer")
             .addField("» York#0001 (146048938242211840)", "Source code for website")
-            .addField("» derpy.#8302 (223518178100248576)", "Inspiration for help menu")
+            .addField("» derpy.#8302 (223518178100248576)", "Inspiration for help menu, made !cat")
             .send();
     }
 };
