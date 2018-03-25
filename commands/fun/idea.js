@@ -61,7 +61,7 @@ module.exports = class Meow extends Base {
                 "where you fly",
                 "where you build",
                 "where you swim",
-                "where you cant sprint",
+                "where you can't sprint",
                 "where you play minigames",
                 "where you battle Jeremaster",
                 "where you battle a mob",
