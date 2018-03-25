@@ -13,28 +13,28 @@ module.exports = class Meow extends Base {
 
         Object.defineProperty(this, "gameType", {
             value: [
-                "A Escapist Game",
-                "A PvP Game",
-                "A RPG Game",
-                "A Parkour Game",
-                "A Puzzle Game",
-                "A Clicker Game",
-                "A Tycoon Game",
-                "A Survival Game",
-                "A Horror Game",
-                "A Magic Game",
-                "A KitPvP",
-                "A Trivia Game",
-                "A Exploration Game",
-                "A Adventure Game",
-                "A Real time Strategy Game",
+                "An escapists game",
+                "A PvP game",
+                "An RPG game",
+                "A parkour game",
+                "A puzzle game",
+                "A clicker game",
+                "A tycoon game",
+                "A survival game",
+                "A horror game",
+                "A magic game",
+                "A KitPvP game",
+                "A trivia game",
+                "A exploration game",
+                "An adventure game",
+                "A real time strategy game",
                 "A grindy escapist",
                 "A grindy survival",
-                "A Stratgy",
-                "A Board Game",
-                "A Mob Arena",
-                "A Dropper Game",
-                "A Spleef Game"
+                "A stratgy game",
+                "A board game",
+                "A mob arena game",
+                "A dropper game",
+                "A spleef game"
             ]
         });
         
