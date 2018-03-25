@@ -52,7 +52,8 @@
                 "Profanity filter",
                 "Mention spam filter",
                 "!history",
-                "Improved moderation logs"
+                "Improved moderation logs",
+                "!cat"
             ],
             "removals": [],
             "notes": [],
