@@ -72,7 +72,10 @@ module.exports = class Meow extends Base {
                 "where you kill mobs",
                 "where you code",
                 "where you drown",
-                "where you eat cake"
+                "where you eat cake",
+                "where you trigger lagslayer",
+                "where you avoid CPU ussage",
+                "where you break the loop",
             ]
         });
         
@@ -87,7 +90,29 @@ module.exports = class Meow extends Base {
                 "to fail.",
                 "to kill everything.",
                 "and have to beat all levels",
-                "with friends."
+                "with friends.",
+                "or you die.",
+                "or Dubanzi bans you.",
+                "or you get kicked.",
+                "or you wont get invited to the party.",
+                "or you wont get your breakfast.",
+                "with NPC Friends",
+                "with fake friends.",
+                "with ottelino <3",
+                "with Jeremaster.",
+                "with SnorkelStudios.",
+                "or you get banned.",
+                "or a tornado takes you to the land of OZ.",
+                "with noone else.",
+                "and get killed.",
+                "and disappear.",
+                "and stuff.",
+                "to get banned.",
+                "to make LagSlayer kill the plot.",
+                "to be hated.",
+                "to lose points.",
+                "to be a meme.",
+                "to win free overlord."
             ]
         });
 
