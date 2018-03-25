@@ -30,7 +30,7 @@ module.exports = class Meow extends Base {
                 "A real time strategy game",
                 "A grindy escapist",
                 "A grindy survival",
-                "A stratgy game",
+                "A strategy game",
                 "A board game",
                 "A mob arena game",
                 "A dropper game",
