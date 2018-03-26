@@ -15,8 +15,8 @@ module.exports = class Random extends Base {
         // Ignore if sent in dfchat
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
         
-        let numberOne = args[1]
-        let numberTwo = args[2]
+        let numberOne = args[0]
+        let numberTwo = args[1]
         let rnd = Math.floor(Math.random() * numberTwo) + numberOne
     }
 
