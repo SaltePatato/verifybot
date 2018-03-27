@@ -14,42 +14,39 @@ module.exports = class Calc extends Base {
     async run(message, args) {
         // Ignore if sent in dfchat
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
-        var f = [];
+        
+        let f = [];
+        
         function factorial (n) {
-            if (n == 0 || n == 1)
-            return 1;
-            if (f[n] > 0)
-            return f[n];
-        return f[n] = factorial(n-1) * n;
+            if (n == 0 || n == 1) return 1;
+            if (f[n] > 0) return f[n];
+            
+            return f[n] = factorial(n-1) * n;
         };
         
-        let operation = args[0]
-        let numberOne = parseInt(args[1]);
-        let numberTwo = parseInt(args[2]);
+        const operation = args[0]
+        const one = parseInt(args[1]);
+        const two = parseInt(args[2]);
         
-        if (operation == 'add') {
-        let ans = numberOne + numberTwo
-        }
-        if (operation == 'subtract') {
-        let ans = numberOne - numberTwo
-        }
-        if (operation == 'multiply') {
-        let ans = numberOne * numberTwo
-        }
-        if (operation == 'divide') {
-        let ans = numberOne / numberTwo
-        }
-        if (operation == 'exponent') {
-        let ans = Math.pow(numberOne, numberTwo);
-        }
-        if (operation == 'sqrt') {
-        let ans = Math.sqrt(numberOne);
-        }
-        if (operation == 'factorial') {
-        let ans = factorial(numberOne);
-        }
+        if (isNaN(one)) return super.error("Invalid number.");
+        if (["add", "multiply", "divide", "exponent", "sqrt"].includes(operation) && isNaN(two)) return super.error("This operation requires a second parameter.");
+        
+        // Extract properties from math
+        const { pow, sqrt } = Math;
+        
+        let ans;
 
-    pause() {
-        return new ans(r => setTimeout(r, 5000));
+        if (operation === "add") ans = one + two; 
+        else if (operation === "subtract") ans = one - two;
+        else if (operation === "multiply") ans = one * two;
+        else if (operation === "divide") {
+            if (two === 0) return super.error("Cannot devide by 0.");
+            ans = one / two;
+        }
+        else if (operation === "exponent") ans = pow(one, two);
+        else if (operation === "sqrt") ans = sqrt(one, two);
+        else if (operation === "factorial") ans = factorial(one);
+        
+        super.respond(`The answer is \`${ans}\`.`);
     }
 };
