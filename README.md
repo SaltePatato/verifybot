@@ -1,5 +1,5 @@
 # Introduction
-This is the official bot used by the [DiamondFire](http://www.mciamondfire.com/home) [Discord server](http://discord.gg/pDHBbBD). This Discord bot's main purpose is to link new users' Discord and Minecraft accounts.
+This is the official bot used by the [DiamondFire](http://www.mcdiamondfire.com/) [Discord server](http://discord.gg/pDHBbBD). This Discord bot's main purpose is to link new users' Discord and Minecraft accounts.
 
 # What Verification Does
 Verifying your account has multiple benifits, such as enabling "reactions." If you do not verify your account, you will not be able to send messages to any channel.
