@@ -15,12 +15,15 @@ module.exports = class Random extends Base {
         // Ignore if sent in dfchat
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
         
-        let numberOne = parseInt(args[0]);
-        let numberTwo = parseInt(args[1]);
-        let rnd = Math.floor(Math.random() * numberTwo) + numberOne
-    }
-
-    pause() {
-        return new rnd(r => setTimeout(r, 5000));
+        // Parse arguments
+        const one = parseInt(args[0]);
+        const two = parseInt(args[1]);
+        
+        // Validate arguments
+        if (isNaN(one) || isNaN(two)) return super.error("Please provide two valid numbers.");
+        if (two > one) return super.error("The first number must be smaller than the second.");
+        
+        // Chose a number
+        super.respond(`I chose \`${Math.floor(Math.random() * max) + min}\`.`);
     }
 };
