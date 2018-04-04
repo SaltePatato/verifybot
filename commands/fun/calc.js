@@ -3,7 +3,7 @@ const Base = require("../../base/Command.js");
 module.exports = class Calc extends Base {
     constructor(client) {
         super(client, {
-            name: "calc"
+            name: "calc",
             description: "Calculates using an operation and numbers.",
             usage: "<operation> <num1> [num2 (if needed)]",
             category: "fun",
