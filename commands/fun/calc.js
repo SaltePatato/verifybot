@@ -44,7 +44,7 @@ module.exports = class Calc extends Base {
             ans = one / two;
         }
         else if (operation === "exponent") ans = pow(one, two);
-        else if (operation === "sqrt") ans = sqrt(one, two);
+        else if (operation === "sqrt") ans = sqrt(one, two || 2);
         else if (operation === "factorial") ans = factorial(one);
         
         super.respond(`The answer is \`${ans}\`.`);
