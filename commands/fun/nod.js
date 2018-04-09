@@ -35,7 +35,6 @@ module.exports = class Nod extends Base {
                     "http://nodtotherhythm.com/?KnUy7xBn",
                     "http://nodtotherhythm.com/?Fe2SDEXy",
                     "http://nodtotherhythm.com/?3MbKlnyQ",
-                    "http://nodtotherhythm.com/?0jVnpCnO",
                     "http://nodtotherhythm.com/?mowgDISF",
                     "http://nodtotherhythm.com/?hgK6Ub7h",
                     "http://nodtotherhythm.com/?B89gzrSe",
