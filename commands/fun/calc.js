@@ -32,7 +32,7 @@ module.exports = class Calc extends Base {
         if (["add", "multiply", "divide", "exponent"].includes(operation) && isNaN(two)) return super.error("This operation requires a second parameter.");
         
         // Extract properties from math
-        const { pow, sqrt } = Math;
+        const { pow, sqrt, floor, ceil } = Math;
         
         let ans;
 
@@ -46,6 +46,8 @@ module.exports = class Calc extends Base {
         else if (operation === "exponent") ans = pow(one, two);
         else if (operation === "sqrt") ans = sqrt(one, two || 2);
         else if (operation === "factorial") ans = factorial(one);
+        else if (operation === "floor") ans = floor(one);
+        else if (operation === "ceil") ans = ceil(one);
         
         super.respond(`The answer is \`${ans}\`.`);
     }
