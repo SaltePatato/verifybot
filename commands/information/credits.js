@@ -17,7 +17,7 @@ module.exports = class Credits extends Base {
             .setThumbnail(this.client.user.avatarURL({ size: 128 }))
             .setAuthor("Credits")
             .setDescription("This is a full list of users who helped with the development of VerifyBot, directly or indirectly.")
-            .addField("» Daedalus#1234 (268071134057070592)", "Bot developer")
+            .addField("» Daedalus#1111 (268071134057070592)", "Bot developer")
             .addField("» Jeremaster#3655 (180506843796209664)", "Minecraft server developer")
             .addField("» York#0001 (146048938242211840)", "Source code for website")
             .addField("» derpy.#8302 (223518178100248576)", "Made commands like !idea and !cat as well as provided a swear filter")
