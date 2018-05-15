@@ -1,14 +1,14 @@
 const { Blacklist } = require("discordblacklist");
 const config = require("../config.json");
 
+const blacklist = new Blacklist({ token: this.client.config.credentials.dbans, update: true });
+
 module.exports = class {
     constructor(client) {
         this.client = client;
     }
 
     async run(member) {
-        // Create a blacklist
-        const blacklist = new Blacklist({ token: this.client.config.credentials.dbans, update: true });
         // Update the blacklist
         await blacklist.update();
         // Fetch blacklist data
