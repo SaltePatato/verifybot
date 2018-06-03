@@ -10,7 +10,7 @@ class Command {
      * @param {String} options.name The name of the command
      * @param {String} options.description The description of the command
      * @param {String} options.usage The command usage
-     * @param {String} options.category The category for the cmomand
+     * @param {String} options.category The category for the command
      * @param {Number} options.permLevel The permission level required for the command
      * @param {Number} options.cooldown The cooldown time on a command
      * @param {Array} options.aliases The command aliases
