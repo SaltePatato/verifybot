@@ -93,6 +93,9 @@ module.exports = class Nod extends Base {
                     "http://nodtotherhythm.com/?RhzWfXgN",
                     "http://nodtotherhythm.com/?ZCcdRGfx",
                     "http://nodtotherhythm.com/?3p6XWqSR",
+                    "http://nodtotherhythm.com/?rXPGMYaO",
+                    "http://nodtotherhythm.com/?eyi7gQpA",
+                    "http://nodtotherhythm.com/?gZ5Txfv5",
                 ]
             });
             
