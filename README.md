@@ -1,7 +1,7 @@
-![version](https://img.shields.io/badge/Version-2.2-brightgreen.svg)
-![license](https://img.shields.io/badge/License-MIT-brightgreen.svg)
-[![Discord](https://img.shields.io/discord/180793115223916544.svg?style=flat&logo=discord&label=DiamondFire&colorA=7289DA&colorB=2C2F33)](https://discord.gg/TzgUCSV)
-[![Discord](https://img.shields.io/discord/357718224378265602.svg?style=flat&logo=discord&label=Verify\%20Bot&colorA=7289DA&colorB=2C2F33)](https://discord.gg/EfXaaVT)
+![version](https://img.shields.io/badge/Version-2.2-brightgreen.svg?style=flat-square)
+![license](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square)
+[![Discord](https://img.shields.io/discord/180793115223916544.svg?style=flat-square&logo=discord&label=DiamondFire&colorA=7289DA&colorB=2C2F33)](https://discord.gg/TzgUCSV)
+[![Discord](https://img.shields.io/discord/357718224378265602.svg?style=flat-suqare&logo=discord&label=Verify\%20Bot&colorA=7289DA&colorB=2C2F33)](https://discord.gg/EfXaaVT)
 # VerifyBot
 *Used to link a Discord account with an Minecraft account.*
 
