@@ -1,7 +1,7 @@
-![version](https://img.shields.io/badge/Version-2.2-brightgreen.svg)
-![license](https://img.shields.io/badge/License-MIT-brightgreen.svg)
-[![Discord](https://img.shields.io/discord/180793115223916544.svg?style=flat&logo=discord&label=DiamondFire&colorA=7289DA&colorB=2C2F33)](https://discord.gg/TzgUCSV)
-[![Discord](https://img.shields.io/discord/357718224378265602.svg?style=flat&logo=discord&label=Verify\%20Bot&colorA=7289DA&colorB=2C2F33)](https://discord.gg/EfXaaVT)
+![version](https://img.shields.io/badge/Version-2.2-brightgreen.svg?style=flat-square)
+![license](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square)
+[![Discord](https://img.shields.io/discord/180793115223916544.svg?style=flat-square&logo=discord&label=DiamondFire&colorA=7289DA&colorB=2C2F33)](https://discord.gg/TzgUCSV)
+[![Discord](https://img.shields.io/discord/357718224378265602.svg?style=flat-square&logo=discord&label=Verify\%20Bot&colorA=7289DA&colorB=2C2F33)](https://discord.gg/EfXaaVT)
 # VerifyBot
 *Used to link a Discord account with an Minecraft account.*
 
@@ -17,4 +17,4 @@ Verification allows you to send messages to a channel in the Discord server, sub
 * An SQL server with proper stucture
 
 ## Self Hosting
-Feel free to host a a version of VerifyBot, but keep in mind that you need to have a MySQL structure with the proper data structure. You also need to create extra "hidden" files that are used for keeping the MySQL structures private.
+Feel free to host a a version of VerifyBot, but keep in mind that you need to have a SQL structure with the proper data structure. You also need to create extra "hidden" files that are used for keeping the SQL structures private.
