@@ -6,10 +6,10 @@
 *Used to link a Discord account with an Minecraft account.*
 
 ## Introduction
-This is the official [Discord](https://discordapp.com/) bot used by the [DiamondFire](http://www.mcdiamondfire.com/) [Discord server](http://discord.gg/pDHBbBD). This bot's main purpose is to link the Discord account from the user with the [Minecraft](https://minecraft.net/) account.
+This is the official [Discord](https://discordapp.com/) bot used by the [DiamondFire](https://www.mcdiamondfire.com/) [Discord server](http://discord.gg/pDHBbBD). This bot's main purpose is to link a user's Discord account with their [Minecraft](https://minecraft.net/) account.
 
 ## What Verification Does
-Verification allows you to send messages to a channel in the Discord server.
+Verification allows you to send messages to a channel in the Discord server, submit reports, and have access to most channels.
 
 ## Requirements
 * A Minecraft server
@@ -17,4 +17,4 @@ Verification allows you to send messages to a channel in the Discord server.
 * An SQL server with proper stucture
 
 ## Self Hosting
-Feel free to host a a version of VerifyBot, but keep in mind that you need to have a MySQL structure with the proper data structure.
+Feel free to host a a version of VerifyBot, but keep in mind that you need to have a MySQL structure with the proper data structure. You also need to create extra "hidden" files that are used for keeping the MySQL structures private.
