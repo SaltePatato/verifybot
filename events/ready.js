@@ -57,10 +57,10 @@ module.exports = class {
                     status: "dnd"
                 });
             } else {
-                const ids = await this.client.query("SELECT COUNT(uuids) FROM ranks;");
+                const ids = await this.client.query("SELECT COUNT(uuid) FROM ranks;");
                 this.client.user.setPresence({
                     activity: {
-                        name: `with ${ids[0]["COUNT(ranks)"]} unique players`,
+                        name: `with ${ids[0]["COUNT(uuid)"]} unique players`,
                         type: 0
                     },
                     status: "online"
