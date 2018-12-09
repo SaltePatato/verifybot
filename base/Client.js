@@ -53,6 +53,12 @@ class CustomClient extends Client {
          * @type {String}
          */
         Object.defineProperty(this, "guildID", { value: clientOptions.guild });
+        
+        /**
+        * A collection of giveaways
+        * @type {Collection}
+        */
+        Object.defineProperty(this, "giveaways", { value: new Collection });
 
         /**
          * SQL data
