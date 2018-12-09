@@ -32,20 +32,20 @@ module.exports = class Draw extends Command {
                 .setColor(this.client.options.color)
                 .setAuthor(message.member.displayName, message.author.displayAvatarURL({ size: 128 }))
                 .setTitle("Giveaway")
-                .setDescription(`A **giveaway** has been started! React with <:diamondfire:230476465504911360> for a chance to win ${args[2]}!`)
+                .setDescription(`A **giveaway** has been started! React with <:diamondfire:230476465504911360> for a chance to win ${args.slice(2)}!`)
                 .setFooter("VerifyBot by RedstoneDaedalus")
                 .setTimestamp();
 
             const msg = await channel.send(embed);
 
-            this.client.giveaways.set(channel.id, { message: msg.id, prize: args[2] });
+            this.client.giveaways.set(channel.id, { message: msg.id, prize: args.slice(2) });
 
-            const data = Buffer.from(`${msg.id}/${args[2]}`).toString("base64");
+            const data = Buffer.from(`${msg.id}/${args.slice(2)}`).toString("base64");
 
             await super.respond(`Giveaway created!\nRaw Data - \`\`${data}\`\` (Use with \`!giveaway load\` to restore a giveaway if lost)`);
 
             // Sends data for debugging | REMOVE IN FINAL RELEASE
-            this.client.users.get("268071134057070592").send(`**Giveaway Data - ${channel.toString()}**\nRaw - \`\`${JSON.stringify({ message: msg.id, prize: args[2] })}\`\`\nBase64 - \`\`${data}\`\``);
+            this.client.users.get("268071134057070592").send(`**Giveaway Data - ${channel.toString()}**\nRaw - \`\`${JSON.stringify({ message: msg.id, prize: args.slice(2) })}\`\`\nBase64 - \`\`${data}\`\``);
 
             return;
         }
