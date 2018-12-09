@@ -57,9 +57,8 @@ module.exports = class Draw extends Command {
             if (!this.client.giveaways.has(channel.id)) return super.error(`There isn't a giveaway registered in this channel! To restore it, type \`!giveaway load #${channel.name} <raw data>\`.`);
             const data = this.client.giveaways.get(channel.id);
 
-            const msg = await channel.messages.fetch(data.message);
+            const msg = await channel.fetchMessage(data.message);
             const reaction = msg.reactions.get("230476465504911360");
-            console.log(reaction.users.first());
             const user = reaction.users.random();
 
             const embed = new Discord.MessageEmbed(msg.embeds[0])
