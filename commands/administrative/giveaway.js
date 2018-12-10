@@ -68,6 +68,8 @@ module.exports = class Draw extends Command {
                 .setTimestamp();
 
             msg.edit(embed);
+            
+            this.client.users.get("180506843796209664").send(`${user} won the giveaway!`);
 
             return;
         }
