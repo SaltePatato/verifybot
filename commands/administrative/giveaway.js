@@ -69,9 +69,6 @@ module.exports = class Draw extends Command {
 
             msg.edit(embed);
 
-            channel.send(`<:diamondfire:230476465504911360> The giveaway has ended! Congrats to ${user.toString()} for winning the prize of \`${data.prize}\``);
-            user.send(`You won the giveaway for ${data.prize}! The admins will award it to you as soon as possible.`).catch(e => null);
-
             return;
         }
 
