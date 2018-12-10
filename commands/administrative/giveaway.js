@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const Command = require("../base/Command.js");
+const Command = require("../../base/Command.js");
 
 module.exports = class Draw extends Command {
     constructor(client) {
