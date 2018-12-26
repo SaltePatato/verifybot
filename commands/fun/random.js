@@ -21,7 +21,7 @@ module.exports = class Random extends Base {
         
         // Validate arguments
         if (isNaN(one) || isNaN(two)) return super.error("Please provide two valid numbers.");
-        if (two > one) return super.error("The first number must be smaller than the second.");
+        if (two < one) return super.error("The first number must be smaller than the second.");
         
         // Chose a number
         super.respond(`I chose \`${Math.floor(Math.random() * max) + min}\`.`);
