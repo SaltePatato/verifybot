@@ -1,5 +1,5 @@
 {
-    "current": "2.2",
+    "current": "2.3",
     "patches": {
         "1.0": {
             "name": "1.0",
@@ -58,6 +58,19 @@
             "removals": [],
             "notes": [],
             "released": "03/23/18"
+        }
+        "2.3": {
+            "name": "2.3",
+            "additions": [
+                "!cat has been updated",
+                "!dog has been updated",
+                "Added Tomoli75 to credits"
+            ],
+            "removals": [],
+            "notes": [
+                "Upload your own pictures at https://verifybot.tomoli.cf/add.php"
+            ],
+            "released": "12/28/18"
         }
     }
 }
