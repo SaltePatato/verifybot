@@ -25,8 +25,8 @@ module.exports = class Dog extends Base {
 
     async fillCache(amount = 5) {
         for (let i = 0; i < amount; i++) {
-            const { text } = await get("https://random.dog/woof");
-            this.cache.push(`https://random.dog/${text}`);
+            const { text } = await get("https://verifybot.tomoli.cf/dog.php");
+            this.cache.push(`${text}`);
         }
     }
 
