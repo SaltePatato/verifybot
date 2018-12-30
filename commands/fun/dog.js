@@ -1,4 +1,5 @@
 const { get } = require("snekfetch");
+const { MessageEmbed } = require("discord.js");
 const Base = require("../../base/Command.js");
 
 module.exports = class Dog extends Base {
@@ -17,16 +18,20 @@ module.exports = class Dog extends Base {
         // Ignore if sent in dfchat
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
 
-        // Send a dog
-        await message.channel.send(this.cache.shift());
-        // Add a new dog to cache
+        // Send a cat
+        const embed = new MessageEmbed()
+        .setImage(this.cache.shift())
+        .setColor(0x00AE86);
+        
+        message.channel.send("**[Dog]**", embed);
+        // Refile Cache
         this.fillCache(1);
     }
 
     async fillCache(amount = 5) {
         for (let i = 0; i < amount; i++) {
-            const { text } = await get("https://random.dog/woof");
-            this.cache.push(`https://random.dog/${text}`);
+            const { text } = await get("https://verifybot.tomoli.cf/dog.php");
+            this.cache.push(`${text}`);
         }
     }
 
