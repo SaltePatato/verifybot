@@ -1,7 +1,7 @@
 const { current, patches } = require("../../patches");
 const Base = require("../../base/Command.js");
 
-module.exports = class Suggest extends Base {
+module.exports = class Patch extends Base {
     constructor(client) {
         super(client, {
             name: "patch",
