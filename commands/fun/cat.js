@@ -1,4 +1,5 @@
 const { get } = require("snekfetch");
+const { MessageEmbed } = require("discord.js");
 const Base = require("../../base/Command.js");
 
 module.exports = class Cat extends Base {
@@ -16,14 +17,15 @@ module.exports = class Cat extends Base {
     async run(message) {
         // Ignore if sent in dfchat
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
-
+        
         // Send a cat
-        const embed = new Discord.RichEmbed()
-        .setImage(this.cache.shift())
-        .setColor(0x00AE86)
-            message.channel.send("[**Cat**]");
-            message.channel.send({embed});
-        // Add a new cat to cache
+        const embed = new MessageEmbed()
+            .setImage(this.cache.shift())
+            .setColor(0x00AE86);
+        
+        // Respond with the cat
+        message.channel.send("[**Cat**]", embed);
+        // Refile cache
         this.fillCache(1);
     }
 
