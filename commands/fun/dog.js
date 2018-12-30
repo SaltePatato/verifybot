@@ -21,7 +21,7 @@ module.exports = class Dog extends Base {
         const embed = new Discord.RichEmbed()
         .setImage(this.cache.shift())
         .setColor(0x00AE86)
-            message.channel.send("[**Cat**]");
+            message.channel.send("[**Dog**]");
             message.channel.send({embed});
         // Add a new cat to cache
         this.fillCache(1);
