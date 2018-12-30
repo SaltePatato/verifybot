@@ -1,4 +1,5 @@
 const { get } = require("snekfetch");
+const { MessageEmbed } = require("discord.js");
 const Base = require("../../base/Command.js");
 
 module.exports = class Dog extends Base {
@@ -18,12 +19,12 @@ module.exports = class Dog extends Base {
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
 
         // Send a cat
-        const embed = new Discord.RichEmbed()
+        const embed = new MessageEmbed()
         .setImage(this.cache.shift())
-        .setColor(0x00AE86)
-            message.channel.send("[**Dog**]");
-            message.channel.send({embed});
-        // Add a new cat to cache
+        .setColor(0x00AE86);
+        
+        message.channel.send("**[Dog]**", embed);
+        // Refile Cache
         this.fillCache(1);
     }
 
