@@ -17,9 +17,13 @@ module.exports = class Dog extends Base {
         // Ignore if sent in dfchat
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
 
-        // Send a dog
-        await message.channel.send(this.cache.shift());
-        // Add a new dog to cache
+        // Send a cat
+        const embed = new Discord.RichEmbed()
+        .setImage(this.cache.shift())
+        .setColor(0x00AE86)
+            message.channel.send("[**Cat**]");
+            message.channel.send({embed});
+        // Add a new cat to cache
         this.fillCache(1);
     }
 
