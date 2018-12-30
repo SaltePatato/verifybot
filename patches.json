@@ -64,13 +64,15 @@
             "additions": [
                 "!cat has been updated",
                 "!dog has been updated",
-                "Added Tomoli75 to credits"
+                "Embeds added to !cat, !dog etc",
+                "Added Tomoli75 to credits",
+                "Added SiebeDW to credits"
             ],
             "removals": [],
             "notes": [
                 "Upload your own pictures at https://verifybot.tomoli.cf/add.php"
             ],
-            "released": "12/28/18"
+            "released": "12/30/18"
         }
     }
 }
