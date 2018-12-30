@@ -1,7 +1,7 @@
 const { get } = require("snekfetch");
 const Base = require("../../base/Command.js");
 
-module.exports = class Dog extends Base {
+module.exports = class Cat extends Base {
     constructor(client) {
         super(client, {
             name: "cat",
