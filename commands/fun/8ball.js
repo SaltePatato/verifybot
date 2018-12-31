@@ -15,7 +15,7 @@ module.exports = class EightBall extends Base {
         // Ignore if sent in dfchat
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
         // Error if message does not end in ?
-        if (message.content.indexOf("?") !== message.content.length - 1) return super.error("That doesn't look like a question to me!");
+        if (message.content.lastIndexOf("?") !== message.content.length - 1) return super.error("That doesn't look like a question to me!");
         //Responses
         const responses = [
             "Definitely.",
@@ -27,8 +27,13 @@ module.exports = class EightBall extends Base {
             "Absolutely not!",
             "Eeh, no."
         ];
+        
+        const question = args.join(" ");
+        
+        message.mentions.members.forEach(member => question.replace(new Regex(member.toString(), "g"), "@" + member.displayName));
+        message.mentions.roles.forEach(role => question.replace(new Regex(role.toString(), "g"), "@" + role.name));
 
         // Send a response
-        message.channel.send(`**__${message.member.displayName}__ asks: __${args.join(" ")}__**\n${responses[Math.floor(Math.random() * responses.length)]}`);
+        message.channel.send(`**__${message.member.displayName}__ asks: __${question}__**\n${responses[Math.floor(Math.random() * responses.length)]}`);
     }
 };
