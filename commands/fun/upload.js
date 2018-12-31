@@ -1,33 +1,26 @@
 const Base = require("../../base/Command.js");
-const request = require('snekfetch');
+const { get } = require("snekfetch");
 
 module.exports = class Upload extends Base {
     constructor(client) {
         super(client, {
             name: "upload",
             description: "Upload your own cat/dog pictures!",
-            usage: "",
+            usage: "[attachment with message]",
             category: "fun",
-            permLevel: 0,
-            aliases: ["uploadmyanimal"]
+            permLevel: 1
         });
     }
 
-    run() {
-        //Get the attachment
-        var Attachment = (message.attachments).array();
-        //Get how long the attachment object is (This is to check if there is an attachment)
-        var count = Object.keys(Attachment).length;
+    run(message) {
+        // Get the attachment
+        const attachment = message.attachments.first();
 
-      if(count == 1) { //If there is an attachment send it.        
-        request.get('https://verifybot.tomoli.cf/addurl.php?link='+ Attachment[0].url) //Add the attachment to the api
-        message.channel.send("**Upload** » Animal upload successful. Our robo hamsters are currently verifying its actually a animal, if approved you should soon see it in !cat or !dog").then(msg => {
-            msg.delete(10000) 
-          })
-      }else{ //If there is no attachment send an error.
-          message.channel.send("**Upload** » Hey uh, where's the animal? Is the invisible hamster back again? (You forgot to attach your image with your command)").then(msg => {
-            msg.delete(8000)
-          })
+      if(attachment) {
+          // Upload
+        get(`https://verifybot.tomoli.cf/addurl.php?link={attachment.url}`);
+        return super.respond("Your image has been uploaded! Your image will appear in !cat or !dog once our moderators have accepted it.");
       }
+      return super.respond("Please attach your dog or cat image to your message.");
     }
 };
