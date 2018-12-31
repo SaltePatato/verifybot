@@ -21,6 +21,6 @@ module.exports = class Upload extends Base {
         get(`https://verifybot.tomoli.cf/addurl.php?link={attachment.url}`);
         return super.respond("Your image has been uploaded! Your image will appear in !cat or !dog once our moderators have accepted it.");
       }
-      return super.respond("Please attach your dog or cat image to your message.");
+      return super.error("Please attach your dog or cat image to your message.");
     }
 };
