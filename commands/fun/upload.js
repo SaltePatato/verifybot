@@ -19,7 +19,7 @@ module.exports = class Upload extends Base {
 
         if (attachment) {
             // Upload
-            await get(`https://verifybot.tomoli.cf/addurl.php?link={attachment.url}`);
+            await get(`https://verifybot.tomoli.cf/addurl.php?link=${attachment.url}`);
             message.delete();
             return super.respond("Your image has been uploaded! Your image will appear in !cat or !dog once our moderators have accepted it.");
         }
