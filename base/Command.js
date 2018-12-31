@@ -14,6 +14,7 @@ class Command {
      * @param {Number} options.permLevel The permission level required for the command
      * @param {Number} options.cooldown The cooldown time on a command
      * @param {Array} options.aliases The command aliases
+     * @param {Boolean} options.clean Whether or not the bot deletes the message
      */
     constructor(client, options) {            
         /**
@@ -40,7 +41,8 @@ class Command {
         this.conf = {
             level: options.permLevel || 0,
             cooldown: options.cooldown || 20000,
-            aliases: options.aliases || []
+            aliases: options.aliases || [],
+            clean: options.clean === undefined ? true : options.clean
         };
 
         /**
