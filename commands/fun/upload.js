@@ -4,7 +4,7 @@ const request = require('snekfetch');
 module.exports = class Upload extends Base {
     constructor(client) {
         super(client, {
-            name: "suggest",
+            name: "upload",
             description: "Upload your own cat/dog pictures!",
             usage: "",
             category: "fun",
