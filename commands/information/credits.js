@@ -23,7 +23,7 @@ module.exports = class Credits extends Base {
             .addField("» derpy.#8302 (223518178100248576)", "Made commands like !idea and !cat as well as provided a swear filter")
             .addField("» Dragzii#0025 (278656939016192000)", "Community manager, created github related changes such as community guidelines, pull request template")
             .addField("» ArtificialLegacy#0682 (261619158096150528)", "Created !nod")
-            .addField("» Tomoli75#8318 (248855041803288576)", "Improved !cat with truly random cats, back-end and front-end work for !cat, !dog, a small amount of !upload")
+            .addField("» Tomoli75#8318 (248855041803288576)", "Improved !cat with truly random cats")
             .addField("» SiebeDW#0001  (261885314933587969)", "Added embeds to commands, made !upload")
             .setFooter("All other contributors are mentioned at https://github.com/RedstoneDaedalus/verifybot/graphs/contributors")
             .send();
