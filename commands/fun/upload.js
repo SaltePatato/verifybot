@@ -8,7 +8,8 @@ module.exports = class Upload extends Base {
             description: "Upload your own cat/dog pictures!",
             usage: "[attachment with message]",
             category: "fun",
-            permLevel: 1
+            permLevel: 1,
+            clean: false
         });
     }
 
