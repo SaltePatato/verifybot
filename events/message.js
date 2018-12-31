@@ -60,8 +60,8 @@ module.exports = class {
         // Check if user is on cooldown
         if (cmd.cooldown.has(message.author.id)) return;
 
-        // Delete message containing command
-        message.delete();
+        // Delete message containing command if clean = true
+        if (cmd.clean) message.delete();
         // Append the message to the command
         message.appendTo(cmd);
 
