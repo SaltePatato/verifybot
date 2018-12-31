@@ -13,7 +13,7 @@ module.exports = class Upload extends Base {
         });
     }
 
-    run(message) {
+    async run(message) {
         // Get the attachment
         const attachment = message.attachments.first();
 
