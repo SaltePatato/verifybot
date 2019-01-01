@@ -33,7 +33,7 @@ module.exports = class Math extends Base {
             const one = parseInt(args[1]);
             const two = parseInt(args[2]);
               
-            if (operation !== "floor" && operation !== "ceil" && operation !== "n-root" && operation !== "sec" && operation !== "csc" && operation != "cot") return message.channel.send({embed: mEmbed});
+            if (operation !== "floor" && operation !== "ceil" && operation !== "n-root" && operation !== "sec" && operation !== "csc" && operation !== "cot") return message.channel.send({embed: mEmbed});
                 
             if (["exponent"].includes(operation) && isNaN(two)) return message.reply("This operation requires a second parameter.");
 
