@@ -22,6 +22,7 @@ module.exports = class Cat extends Base {
         const embed = new MessageEmbed()
             .setImage(this.cache.shift())
             .setColor(0x00AE86);
+            .setFooter("Upload your cat with !upload, remembering to attach an image!")
         
         // Respond with the cat
         message.channel.send("[**Cat**]", embed);
