@@ -22,6 +22,7 @@ module.exports = class Dog extends Base {
         const embed = new MessageEmbed()
         .setImage(this.cache.shift())
         .setColor(0x00AE86);
+        .setFooter("Upload your dog with !upload, remembering to attach an image!")
         
         message.channel.send("**[Dog]**", embed);
         // Refile Cache
