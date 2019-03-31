@@ -60,6 +60,11 @@ class CustomClient extends Client {
         */
         Object.defineProperty(this, "giveaways", { value: new Collection });
 
+
+        
+        //! APRIL FOOLS
+        Object.defineProperty(this, "specialNicknames", { value: new Collection() });
+
         /**
          * SQL data
          * @type {Object}
@@ -70,14 +75,31 @@ class CustomClient extends Client {
             // Fetch all verified users
             const verified = this.guild.members.filter(member => member.roles.exists("name", "Verified"));
             // Fetch account data
-            const data = await this.query("SELECT player_name, discord_id FROM linked_accounts;");
+
+            //! APRIL FOOLS
+            const data = verified.map(member => {
+                // If nickname set doesn't have a name yet
+                if (!specialNicknames.has(member.id)) {
+                    // Pick a random admin
+                    const admin = this.guild.roles.find("name", "Administrator").random();
+                    // Add the nickname to the collection
+                    specialNicknames.set(member.id, admin.displayName());
+                }
+                
+                // Create artificial data entry
+                return {
+                    discord_id: member.id,
+                    player_name: specialNicknames.get(member.id)
+                };
+            });
             
             // Run through all verified users
             verified.forEach(user => {
                 // Fetch their profile data
                 const profile = data.find(entry => entry.discord_id === user.id);
                 // If no profile exists, unverify them
-                if (!profile) return user.roles.remove(user.roles.find("name", "Verified")).catch(() => null).then(() => user.setNickname("").then(() => user.send("You have been unverified - this is most likely because you weren't verified by the bot, meaning you aren't registered in the database.")));
+                //! APRIL FOOLS
+                // if (!profile) return user.roles.remove(user.roles.find("name", "Verified")).catch(() => null).then(() => user.setNickname("")).then(() => user.send("You have been unverified - this is most likely because you weren't verified by the bot, meaning you aren't registered in the database.")));
 
                 // If nickname is out of sync, set it to their player name
                 if (profile.player_name !== user.displayName) return user.setNickname(profile.player_name);
