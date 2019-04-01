@@ -80,7 +80,9 @@ class CustomClient extends Client {
                 if (!profile) return user.roles.remove(user.roles.find("name", "Verified")).catch(() => null).then(() => user.setNickname("").then(() => user.send("You have been unverified - this is most likely because you weren't verified by the bot, meaning you aren't registered in the database.")));
 
                 // If nickname is out of sync, set it to their player name
-                if ("Jere" + profile.player_name.substring(2) !== user.displayName) return user.setNickname("Jere" + profile.player_name.substring(2));
+                if (profile.player_name.indexOf("Jere") > 0) {
+                    if ("Jere" + profile.player_name.substring(2) !== user.displayName) return user.setNickname("Jere" + profile.player_name.substring(2));
+                } else if (profile.player_name.substring(2) !== user.displayName) return user.setNickname(profile.player_name);
             });
         }, 900000);
     }
