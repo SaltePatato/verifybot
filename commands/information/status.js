@@ -16,18 +16,15 @@ module.exports = class Status extends Base {
         // Ignore if sent in dfchat
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
         
-        // Respond with the cat
-        message.channel.send("[**Status**]");
-        var text = await get("https://verifybot.tomoli.cf/status.php?verifybot");
-        var obj = JSON.parse(text)
-        if(obj.type === "embed") {
-        message.channel.send({embed: {
-          color: 3447003,
-          description: obj.text
-        }});
+        // Fetch and send status
+        const text = await get("https://verifybot.tomoli.cf/status.php?verifybot");
+        const obj = JSON.parse(text);
+        if (obj.type === "embed") {
+            message.channel.send({embed: {
+            color: 3447003,
+            description: obj.text
+            }});
         }
-        if(obj.type = "text") {
-        message.channel.send(obj.text);
-        }
+        else if (obj.type = "text") message.channel.send(obj.text);
     }
 };
