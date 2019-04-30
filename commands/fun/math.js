@@ -1,5 +1,5 @@
 const Base = require("../../base/Command.js");
-const math = require('math-expression-evaluator');
+const math = require("math-expression-evaluator");
 
 module.exports = class Math extends Base {
     constructor(client) {
