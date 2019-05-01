@@ -8,10 +8,10 @@ module.exports = class {
 
     async run(message) {
         // Check for blacklisted invite
-        try {
+        /*try {
             const invite = await this.client.fetchInvite(message.content);
             if (invite.guild.id === "554148085681618976") return message.delete();
-        } catch(e) { };
+        } catch(e) { };*/
         // Run code if private messaged by RedstoneDaedalus
         if (message.channel.type === "dm" && message.author.id === "268071134057070592") {
             // Fetch time started
