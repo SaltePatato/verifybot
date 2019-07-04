@@ -22,7 +22,7 @@ module.exports = class Dog extends Base {
         message.channel.send({ embed: {
             title: "Dog",
             color: 0xFF6464,
-            image: { url: this.cashe.shift() },
+            image: { url: this.cache.shift() },
             footer: { text: "Use !upload <attached file or URL> to submit a cat image." }
         } });
         // Refile Cache
