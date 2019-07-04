@@ -19,12 +19,12 @@ module.exports = class Dog extends Base {
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
 
         // Send a cat
-        const embed = new MessageEmbed()
-        .setImage(this.cache.shift())
-        .setColor(0x00AE86);
-        .setFooter("Upload your dog with !upload, remembering to attach an image!")
-        
-        message.channel.send("**[Dog]**", embed);
+        message.channel.send({ embed: {
+            title: "Dog",
+            color: 0xFF6464,
+            image: { url: this.cashe.shift() },
+            footer: { text: "Use !upload <attached file or URL> to submit a cat image." }
+        } });
         // Refile Cache
         this.fillCache(1);
     }
