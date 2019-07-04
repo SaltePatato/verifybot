@@ -12,6 +12,9 @@ module.exports = class Cat extends Base {
             permLevel: 0,
             cooldown: 60000
         });
+        
+        Object.defineProperty(this, "cache", { value: [] });
+        this.fillCache();
     }
 
     async run(message) {
@@ -35,10 +38,5 @@ module.exports = class Cat extends Base {
             const { text } = await get("https://verifybot.tomoli.cf/cat.php");
             this.cache.push(`${text}`);
         }
-    }
-
-    init() {
-        Object.defineProperty(this, "cache", { value: [] });
-        this.fillCache();
     }
 };
