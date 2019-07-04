@@ -21,16 +21,7 @@ module.exports = class Cat extends Base {
         // Ignore if sent in dfchat
         if (message.channel.name === "dfchat") return super.error("You can't use that here!");
         
-        // Send a cat
-        const embed = new MessageEmbed()
-            .setImage(this.cache.shift())
-            .setColor(0x00AE86);
-            .setFooter("Upload your cat with !upload, remembering to attach an image!")
-        
-        // Respond with the cat
-        message.channel.send("[**Cat**]", embed);
-        // Refile cache
-        this.fillCache(1);
+        message.channel.send(`__Cached Cat Links:\n${this.cache.join("\n")}`);
     }
 
     async fillCache(amount = 5) {
