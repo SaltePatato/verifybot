@@ -25,7 +25,7 @@ module.exports = class Cat extends Base {
             title: "Cat",
             color: 0x6464FF,
             image: { url: this.cache.shift() },
-            footer: "Use !upload <attached file or URL> to submit a cat image."
+            footer: { text: "Use !upload <attached file or URL> to submit a cat image." }
         } });
         
         this.fillCache(1);
