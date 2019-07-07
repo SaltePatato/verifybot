@@ -6,7 +6,8 @@ module.exports = class Ping extends Command {
             name: "verify",
             description: "Link your Minecraft and Discord accounts.",
             category: "information",
-            permLevel: 0
+            permLevel: 0,
+            clean: false
         });
     }
 
