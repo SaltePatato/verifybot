@@ -62,8 +62,7 @@ Structures.extend("Message", Structure => {
 
             // If author's mentions this minute are above 5, register an offense
             if (this.author.mentionsThisMinute >= 5) {
-                this.member.kick("Spamming mentions.");
-                return this.author.registerOffense("kick", 0xFF6400, `Mess mention | Mentioned \`${this.author.mentionsThisMinute}\` users in under a minute`);
+                return this.author.registerOffense("warn", 0xFFFF00, `Mess mention | Mentioned \`${this.author.mentionsThisMinute}\` users in under a minute`);
             }
             // Otherwise, return false
             return false;
