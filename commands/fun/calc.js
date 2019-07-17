@@ -49,6 +49,8 @@ module.exports = class Calc extends Base {
         else if (operation === "floor") ans = floor(one);
         else if (operation === "ceil") ans = ceil(one);
         
+        if (isNaN(ans)) return super.error("Either the operation specified is invalid or the calculation was done wrong.");
+        
         super.respond(`The answer is \`${ans}\`.`);
     }
 };
