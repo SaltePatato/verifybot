@@ -24,7 +24,7 @@ module.exports = class {
         }
         
         // Verify that message is a command
-        if (!message.content.startsWith(this.client.options.prefix)) return;
+        if (!message.content.startsWith("!")) return;
 
         if (userPerms.level < 4 && ["reports"].includes(message.channel.name)) return;
 
