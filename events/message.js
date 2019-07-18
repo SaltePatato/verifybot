@@ -7,33 +7,6 @@ module.exports = class {
     }
 
     async run(message) {
-        // Check for blacklisted invite
-        /*try {
-            const invite = await this.client.fetchInvite(message.content);
-            if (invite.guild.id === "554148085681618976") return message.delete();
-        } catch(e) { };*/
-        // Run code if private messaged by RedstoneDaedalus
-        if (message.channel.type === "dm" && message.author.id === "268071134057070592") {
-            // Fetch time started
-            const start = Date.now();
-            // Creates a promise containing the result of the evaluation
-            const result = new Promise((r) => r(eval(message.content)));
-
-            // When evaluation is complete...
-            result.then(output => {
-                // Turn the output into a string
-                const out = inspect(output);
-                // Respond with the stringified output
-                message.channel.send(`Evaluated successfully (${Date.now() - start}ms)\`\`\`js\n${out}\`\`\``).catch(() => super.error("Output too long to send."));
-                // If an error occurs...
-            }).catch(err => {
-                // Turn the error into a string
-                const error = inspect(err);
-                // Respond with the stringified error
-                message.channel.send(`Errored (${Date.now() - start}ms)\`\`\`js\n${error}\`\`\``).catch(() => super.error("Output too long to send"));
-            });
-        }
-
         // Ignore if sender is bot, or if message is sent in a direct message
         if (message.author.bot || !message.guild || message.channel.type !== "text") return;
 
@@ -51,7 +24,7 @@ module.exports = class {
         }
         
         // Verify that message is a command
-        if (message.content.indexOf(this.client.config.prefix) === -1) return;
+        if (!message.content.startsWith(this.client.options.prefix)) return;
 
         if (userPerms.level < 4 && ["reports"].includes(message.channel.name)) return;
 
