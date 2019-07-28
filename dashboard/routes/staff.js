@@ -49,7 +49,7 @@ router.get("/support", checkAuth, async (req, res) => {
 });
 
 router.get("/support/queue", async (req, res) => {
-    const { queue } = await fetchSupportData(client, "180506843796209664");
+    const { queue } = await fetchSupportData(req.app.get("client"), "180506843796209664");
     return res.json(queue);
 });
 
