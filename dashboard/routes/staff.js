@@ -48,6 +48,11 @@ router.get("/support", checkAuth, async (req, res) => {
     });
 });
 
+router.get("/support/queue", async (req, res) => {
+    const { queue } = await fetchSupportData(client, "180506843796209664");
+    return res.json(queue);
+});
+
 // POST staff/support/notify/mention
 router.post("/support/notify/mention", checkAuth, async (req, res) => {
     // Fetch variables
