@@ -96,7 +96,9 @@ class Command {
      * @returns {Promise<Message>} The message sent
      */
     respond(content, options = { showCheck: true }) {
-        return this.message.channel.send(`${this.message.author} |${options.showCheck ? " ✅ |" : ""} ${content}`).then(m => m.delete({ timeout: 15000 }));
+        return this.message.channel.send(`${this.message.author} |${options.showCheck ? " ✅ |" : ""} ${content}`).then(m => {
+            if (this.conf.clean) m.delete({ timeout: 15000 });
+        });
     }
 
     /**
