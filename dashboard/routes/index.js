@@ -263,7 +263,7 @@ router.post("/upload-file", async (req, res) => {
     const channel = client.channels.get(req.query.channel);
     if (!channel) return res.json({ error: "Please specify a valid channel ID." });
     
-    channel.send(req.query.message);
+    channel.send(`\`\`\`json\n${req.body}\`\`\``);
     return res.json({ key: req.query.key, channel: req.query.channel });
 });
 
