@@ -3,6 +3,8 @@ const { Router } = require("express");
 const passport = require("passport");
 const uuid = require("uuid/v4");
 
+const bodyParser = require("body-parser");
+
 const checkAuth = require("../functions/checkAuth");
 const fetchVariables = require("../functions/fetchVariables");
 
@@ -254,7 +256,7 @@ router.get("/confirm", checkAuth, async (req, res) => {
     console.log(`${req.user.username} has verified their Discord account as ${data.player_name}.`);
 });
 
-router.post("/upload-file", async (req, res) => {
+router.post("/upload-file", bodyParser.text(), async (req, res) => {
     const { client, templateDir } = fetchVariables(req);
     
 //     const owner = client.options.keys[req.query.key];
