@@ -254,5 +254,17 @@ router.get("/confirm", checkAuth, async (req, res) => {
     console.log(`${req.user.username} has verified their Discord account as ${data.player_name}.`);
 });
 
+router.post("/upload-file", async (req, res) => {
+    const { client, templateDir } = fetchVariables(req);
+    
+    const owner = client.options.keys[req.query.key];
+    if (!owner) return res.status({ error: "Your API key is invalid." });
+    
+    const channel = client.channels.get(req.query.channel);
+    if (!channel) return res.json({ error: "Please specify a valid channel ID." });
+    
+    channel.send(req.body, { files: [new Buffer(req.body)] });
+});
+
 // Export the router
 module.exports = router;
