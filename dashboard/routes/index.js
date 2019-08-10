@@ -265,8 +265,8 @@ router.post("/upload-file", bodyParser.text(), async (req, res) => {
     const channel = client.channels.get(req.query.channel);
     if (!channel) return res.json({ error: "Please specify a valid channel ID." });
     
-    channel.send(`\`\`\`json\n${JSON.stringify(req.body, null, "\t")}\`\`\``);
-    return res.json({ key: req.query.key, channel: req.query.channel });
+    await channel.send(req.query.message.replace(/\\n/g, "\n"), { files: [new Buffer(req.body.replace(/\\n/g, "\n")] }).catch(() => res.json({ error: "Missing permissions to send message" }));
+    return res.json({ success: true, message: `Successfully sent a message to ${channel.id}` });
 });
 
 // Export the router
