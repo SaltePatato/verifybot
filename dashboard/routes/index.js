@@ -265,10 +265,10 @@ router.post("/upload-file", bodyParser.text(), async (req, res) => {
     const channel = client.channels.get(req.query.channel);
     if (!channel) return res.json({ error: "Please specify a valid channel ID." });
     
-    await channel.send(req.query.message.replace(/\\n/g, "\n"), { files: {
+    await channel.send(req.query.message.replace(/\\n/g, "\n"), { files: [{
         attachment: Buffer.from(req.body.replace(/\\n/g, "\n"), "utf8"),
         name: (req.query.filename || "file") + ".txt"
-    } });
+    }] });
     return res.json({ success: true, message: `Successfully sent a message to ${channel.id}` });
 });
 
