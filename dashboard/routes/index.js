@@ -259,8 +259,8 @@ router.get("/confirm", checkAuth, async (req, res) => {
 router.post("/upload-file", bodyParser.text(), async (req, res) => {
     const { client, templateDir } = fetchVariables(req);
     
-//     const owner = client.options.keys[req.query.key];
-//     if (!owner) return res.status({ error: "Your API key is invalid." });
+     const owner = client.options.keys[req.query.key];
+     if (!owner) return res.status({ error: "Your API key is invalid." });
     
     const channel = client.channels.get(req.query.channel);
     if (!channel) return res.json({ error: "Please specify a valid channel ID." });
