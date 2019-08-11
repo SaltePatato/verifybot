@@ -5,6 +5,8 @@ const uuid = require("uuid/v4");
 
 const bodyParser = require("body-parser");
 
+const config = require("../../config.json");
+
 const checkAuth = require("../functions/checkAuth");
 const fetchVariables = require("../functions/fetchVariables");
 
@@ -259,8 +261,8 @@ router.get("/confirm", checkAuth, async (req, res) => {
 router.post("/upload-file", bodyParser.text(), async (req, res) => {
     const { client, templateDir } = fetchVariables(req);
     
-     const owner = client.options.keys[req.query.key];
-     if (!owner) return res.status({ error: "Your API key is invalid." });
+     const owner = config.keys[req.query.key];
+     if (!owner) return res.json({ error: "Your API key is invalid." });
     
     const channel = client.channels.get(req.query.channel);
     if (!channel) return res.json({ error: "Please specify a valid channel ID." });
