@@ -23,6 +23,8 @@ module.exports = class {
             if (triggered) return message.delete();
         }
         
+        if (message.content === "/verify" && message.channel.id === "422588582688063489") return message.delete();
+        
         // Verify that message is a command
         if (!message.content.startsWith("!")) return;
 
@@ -39,7 +41,7 @@ module.exports = class {
         if (cmd.cooldown.has(message.author.id)) return;
 
         // Delete message containing command if clean = true
-        if (cmd.clean) message.delete();
+        message.delete();
         // Append the message to the command
         message.appendTo(cmd);
 
