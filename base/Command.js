@@ -97,7 +97,7 @@ class Command {
      */
     respond(content, options = { showCheck: true }) {
         return this.message.channel.send(`${this.message.author} |${options.showCheck ? " ✅ |" : ""} ${content}`).then(m => {
-            if (this.conf.clean) m.delete({ timeout: 15000 });
+            m.delete({ timeout: 15000 });
         });
     }
 
