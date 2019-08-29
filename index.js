@@ -20,5 +20,5 @@ const client = new Client({
  client.loadCommands(config.dirs.commands).loadEvents(config.dirs.events);
 
 // Start client with token found in config
-client.start(config.credentials.token);
+// client.start(config.credentials.token);
 
