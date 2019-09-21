@@ -37,11 +37,11 @@ module.exports = class {
             
             this.client.user.setPresence({
                 activity: {
-                    name: `for !help | ${list.reduec((out, data) => data.players + out, 0)} players`,
+                    name: `for !help | ${list.reduce((out, data) => data.players + out, 0)} players`,
                     type: "WATCHING"
                 }
             });
-        }, 5000);
+        }, 60000);
 
         // Fetch 12:00 PM
         // const dt = new Date();
