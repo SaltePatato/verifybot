@@ -41,6 +41,7 @@ module.exports = class {
                     type: "WATCHING"
                 }
             });
+        }, 5000);
 
         // Fetch 12:00 PM
         // const dt = new Date();
