@@ -11,7 +11,7 @@ module.exports = class Ping extends Command {
         });
     }
 
-    run() {
-        super.respond(`**Yes!** Someone pinged you! Instead of asking who it was, head over to the neat mentions button at the top right. This would have taken less time for you to do than complaining. Thanks :D`, { showCheck: false });
+    run(message) {
+         message.channel.send(`**Yes!** Someone pinged you! Instead of asking who it was, head over to the neat mentions button at the top right. This would have taken less time for you to do than complaining. Thanks :D`, { showCheck: false });
     }
 };
