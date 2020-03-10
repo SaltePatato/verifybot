@@ -14,7 +14,7 @@ module.exports = class {
         const userPerms = await this.client.permLevel(message.author.id);
 
         // If user is not support...
-        if (userPerms.level < 2) {
+        if (userPerms != null && userPerms.level < 2) {
             // Check if automod was triggered
             const triggered = message.checkCaps() || message.checkProfanity() || message.checkMentionSpam();
             // Wait for checks to be processed
