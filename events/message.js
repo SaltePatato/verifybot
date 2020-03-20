@@ -10,6 +10,8 @@ module.exports = class {
         // Ignore if sender is bot, or if message is sent in a direct message
         if (message.author.bot || !message.guild || message.channel.type !== "text") return;
 
+        if (message.member.roles.has("583693615159705600")) return message.delete();
+
         // Calculate permissions
         const userPerms = await this.client.permLevel(message.author.id);
 
