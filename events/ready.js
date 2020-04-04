@@ -12,9 +12,6 @@ module.exports = class {
         // Inform user that connection to websocket has been made
         console.log(`Connected to Discord as ${this.client.user.tag}.`);
 
-        // Activate dashboard
-        require("../dashboard/dashboard")(this.client);
-
         try {
             // Fetch reboot info
             const reboot = JSON.parse(readFileSync("restart.json"));
