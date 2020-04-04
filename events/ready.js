@@ -4,9 +4,11 @@ const ms = require("pretty-ms");
 module.exports = class {
     constructor(client) {
         this.client = client;
+        this.connectionTimes = 0;
     }
 
     async run() {
+        if (++this.connectionTimes !== 1) return console.log("Reconnection ignored.");
         // Check node version
         if (parseInt(process.version.split(".")[0]) < 8) throw new Error("Your node version is too low, meaning VerifyBot will not function. Please update node if possible.");
         // Inform user that connection to websocket has been made
@@ -39,6 +41,12 @@ module.exports = class {
                 }
             });
         }, 60000);
+
+        try {
+            require("../dashboard/dashboard.js")(this.client);
+        } catch(e) {
+            console.error(e);
+        }
 
         // Fetch 12:00 PM
         // const dt = new Date();
