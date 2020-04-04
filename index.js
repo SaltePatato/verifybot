@@ -21,7 +21,3 @@ const client = new Client({
 
 // Start client with token found in config
 client.start(config.credentials.token);
-
-// Activate dashboard
-require("./dashboard/dashboard")(client)
-
