@@ -23,5 +23,5 @@ const client = new Client({
 client.start(config.credentials.token);
 
 // Activate dashboard
-require("../dashboard/dashboard")(client)
+require("./dashboard/dashboard")(client)
 
