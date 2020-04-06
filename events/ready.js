@@ -8,7 +8,7 @@ module.exports = class {
     }
 
     async run() {
-        if (++this.connectionTimes !== 1) return console.log("Reconnection ignored.");
+        if (++this.connectionTimes !== 1) process.exit(0);
         // Check node version
         if (parseInt(process.version.split(".")[0]) < 8) throw new Error("Your node version is too low, meaning VerifyBot will not function. Please update node if possible.");
         // Inform user that connection to websocket has been made
