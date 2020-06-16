@@ -13,4 +13,4 @@ Verification allows you to send messages to a channel in the Discord server, sub
 * An SQL server with proper stucture
 
 ## Self Hosting
-Feel free to host a a version of VerifyBot, but keep in mind that you need to have a SQL structure with the proper data structure. You also need to create extra "hidden" files that are used for keeping the SQL structures private.
+Feel free to host a version of VerifyBot, but keep in mind that you need to have a SQL structure with the proper data structure. You also need to create extra "hidden" files that are used for keeping the SQL structures private.
